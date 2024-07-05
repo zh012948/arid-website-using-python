@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='portalstyle.css')}}">
+    <title>Admin Portal</title>
+</head>
+
+<body>
+
+    <!-- ======================== *****  SIDE BAR   ****** ============================= -->
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="menu">
+            <li class="active">
+                <a href="{{url_for('portal_dash')}}">
+                    <i class="fa-solid fa-gauge"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{url_for('portal_Profile')}}">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{url_for('portal_AdForms')}}">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Messages</span>
+                </a>
+            </li>
+            <li class="logout">
+                <a href="{{url_for('login')}}">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ======================== *****  Main Content   ****** ============================= -->
+    <div class="main--content">
+
+        <div class="header--wrapper">
+            <div class="header--title">
+                <span>Messages</span>
+                <h2>Dashboard</h2>
+            </div>
+            <div class="user--info">
+                <h3>Admin</h3>
+                <img src="{{url_for('static',filename='images/Muzammil.png')}}" alt="">
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div id="message-container">
+                <!-- Messages will be appended here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="{{url_for('static',filename='script.js')}}"></script>
+</body>
+
+</html>

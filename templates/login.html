@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='loginstyle.css')}}">
+    <title>Modern Login Page | AsmrProg</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-in">
+            <form>
+                <h1>Login</h1>
+                <input id="userEmail" type="email" placeholder="Email" required>
+                <input id="userPassword" type="password" placeholder="Password" required>
+                <a class="login--btn" onclick="Login()">LOGIN</a>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-right">
+                    <img src="{{url_for('static',filename='images/Logo2.png')}}" alt="">
+                    <h1>Admin Login Portal</h1>
+                    <p>Enter Your Credentials to Login</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{url_for('static',filename='script.js')}}">
+    </script>
+</body>
+
+</html>

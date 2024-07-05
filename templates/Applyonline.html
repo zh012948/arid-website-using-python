@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arid Agricultural University</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="{{ url_for('static', filename='images/Logo2.png') }}"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a target="_blank" href="{{ url_for('index') }}">HOME</a></li>
+                    <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+                    <li><a href="{{ url_for('course') }}">COURSE</a></li>
+                    <li><a href="{{ url_for('applyonline') }}">APPLY ONLINE</a></li>
+                    <li><a target="_blank" href="{{ url_for('contact_us') }}">CONTACT</a></li>
+                    <li><a target="_blank" href="{{ url_for('login') }}">ADMIN</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Online Admission Form</h1>
+    </section>
+
+
+    <!-- ===================    Admission Form  ====================== -->
+
+    <section class="admission-form">
+
+        <div class="dataform">
+            <h3>Enter Admission Details</h3>
+            <form class="admin-form" method="POST" action="{{ url_for('submit_admission') }}">
+
+                <table class="admin-table">
+                    <tr>
+                        <td><label for="name">Name:</label></td>
+                        <td><input id="name" name="name" type="text" placeholder="Enter Your Name here..." required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="fname">Father Name:</label></td>
+                        <td><input id="fname" name="fname" type="text" placeholder="Enter Your Father Name here"
+                                required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="gender">Select Gender:</label></td>
+                        <td>
+                            <select name="gender" id="gender">
+                                <option value="0" selected="">Select</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="dob">Date Of Birth:</label></td>
+                        <td><input id="dob" name="dob" type="date" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="number">Mobile Number:</label></td>
+                        <td><input id="number" name="number" placeholder="03XX-XXXXXXX" type="text" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="cnic">CNIC:</label></td>
+                        <td><input id="cnic" name="cnic" placeholder="34XXX-XXXXXXX-X" type="number" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input id="email" name="email" type="email" placeholder="abc@gmail.com" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="domicile">Domicile:</label></td>
+                        <td><input id="domicile" name="domicile" placeholder="City Of Domicile Here" type=" text"
+                                required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="matric">Matric</label></td>
+                        <td><input id="matric" name="matric_subject" placeholder="Science / Medical / Arts" type="text"
+                                required>
+                        </td>
+                        <td><input id="matric_marks" name="matric_marks" type="text" placeholder="Obtain Marks"
+                                style="width: 100px;" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="intermediate">Intermediate</label></td>
+                        <td><input id="intermediate" name="intermediate_subject"
+                                placeholder="Pre-Engineering / Pre-Medical / ICS" type="text" required></td>
+                        <td><input id="intermediate_marks" name="intermediate_marks" type="text"
+                                placeholder="Obtain Marks" style="width: 100px;" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="program">Applying For</label></td>
+                        <td>
+                            <select name="program" id="program">
+                                <option value="0">Select Degree</option>
+                                <!-- No of Rows135 -->
+                                <!-- The matching field will have this value:  -->
+                                <option value="3">B.Sc (Hons.) Agriculture </option>
+                                <option value="4">BS (Biochemistry) </option>
+                                <option value="5">BS (Economics) </option>
+                                <option value="6">BS (Forestry) </option>
+                                <option value="7">BBA (Hons.) </option>
+                                <option value="8">BS(CS) </option>
+                                <option value="9">BS(IT) </option>
+                                <option value="10">DVM </option>
+                                <option value="11">B.Ed </option>
+                                <option value="12">M.Ed. </option>
+                                <option value="13">M.Sc (Anthropology) </option>
+                                <option value="14">M.Sc (Biochemistry) </option>
+                                <option value="15">M. Sc (Biology) </option>
+                                <option value="16">M. Sc (Botany) </option>
+                                <option value="17">M.Sc (Economics) </option>
+                                <option value="18">M. Sc (Education) </option>
+                                <option value="19">M.Sc (Environmental Sciences) </option>
+                                <option value="20">M.Sc (Sociology) </option>
+                                <option value="21">M. Sc (Statistics) </option>
+                                <option value="22">M.Sc (Wildlife Management ) </option>
+                                <option value="23">M. Sc (Zoology) </option>
+                                <option value="24">M.Sc (Hons.) Agronomy </option>
+                                <option value="25">M. Sc (Hons.) Plant Breeding and Genetics </option>
+                                <option value="26">M.Sc (Hons.) Plant Pathology </option>
+                                <option value="27">M.Sc (Hons.) Soil Sciences/ Soil Water and Conservation</option>
+                                <option value="28">M.Sc (Hons.) Entomology </option>
+                                <option value="29">M.Sc (Hons.) Food Technology </option>
+                                <option value="30">M.Sc (Hons.)Forestry and Range Management </option>
+                                <option value="31">M.Sc (Hons.) Horticulture </option>
+                                <option value="32">M.Sc (Hons.) Agri-Economics </option>
+                                <option value="33">M.Sc (Hons.) Agri-Engineering </option>
+                                <option value="34">M. Sc (Hons.) Agri-Extension &amp; Communication</option>
+                                <option value="35">MBA (3-1/2 Years)</option>
+                                <option value="36">MBA (Agri-Business 3-1/2 Years) </option>
+                                <option value="37">MBA (1-1/2 Years) </option>
+                                <option value="38">M.Sc (Education) </option>
+                                <option value="58">MDM (Masters in Development Mang.) </option>
+                                <option value="59">MS (Management Sciences) </option>
+                                <option value="60">MCS </option>
+                                <option value="61">MIT </option>
+                                <option value="62">MS (Computer Sciences) </option>
+                                <option value="63">M.Phil (Anthropology) </option>
+                                <option value="64">M.Phil (Biochemistry) </option>
+                                <option value="65">M. Phil (Biology) </option>
+                                <option value="66">M. Phil (Botany) </option>
+                                <option value="67">M.Phil (Economics) </option>
+                                <option value="68">M. Phil (Education) </option>
+                                <option value="69">M.Phil (Environmental Sciences) </option>
+                                <option value="70">M.Phil (Forestry &amp; Ranage Management) </option>
+                                <option value="71">M.Phil (Sociology) </option>
+                                <option value="72">M.Phil (Statistics) </option>
+                                <option value="73">M.Phil (Wildlife Management) </option>
+                                <option value="74">M. Phil (Zoology) </option>
+                                <option value="75">PhD (Anthropology) </option>
+                                <option value="76">Ph. D (Biochemistry) </option>
+                                <option value="77">PhD (Biology) </option>
+                                <option value="98">Ph. D (Botany) </option>
+                                <option value="99">Ph. D (Economics) </option>
+                                <option value="100">PhD (Sociology) </option>
+                                <option value="101">PhD (Statistics) </option>
+                                <option value="102">Ph. D (Zoology) </option>
+                                <option value="103">Ph. D (Agri-Economics)</option>
+                                <option value="104">Ph. D Agronomy </option>
+                                <option value="105">Ph. D Entomology </option>
+                                <option value="106">Ph. D Food Technology </option>
+                                <option value="107">Ph. D Horticulture </option>
+                                <option value="108">Ph. D Plant Breeding and Genetics </option>
+                                <option value="109">Ph. D Plant Pathology </option>
+                                <option value="110">PhD( Hons.) Agri-Extension </option>
+                                <option value="111">Ph. D</option>
+                                <option value="112">Ph. D (Wildlife Management)</option>
+                                <option value="113">M. Phil (Forestry &amp; Range Managment)</option>
+                                <option value="114">Ph. D (Forestry &amp; Range Managment)</option>
+                                <option value="115">B. Sc. (Hons.) Agric. (Soil Science)</option>
+                                <option value="116">M.Sc. (Hons.) Agric. (Soil Science)</option>
+                                <option value="117">Ph.D (Soil Science)</option>
+                                <option value="120">B.Sc. (Hons.) Agriculture</option>
+                                <option value="121">Ph.D (CS)</option>
+                                <option value="126">M.Sc (Hons.) Human Nutrition and Dietetics</option>
+                                <option value="123">B.Sc (Hons) Agri. Engineering</option>
+                                <option value="124">MS(RS &amp; GIS) (2 Years)</option>
+                                <option value="125">M.Sc Mathematics</option>
+                                <option value="127">M.Phil (Bio-technology) </option>
+                                <option value="128">MBA (Agri-Business 1-1/2 Years)</option>
+                                <option value="129">MS(RS &amp; GIS) (1-1/2 Years)</option>
+                                <option value="130">M.Phil(Veterinary Anatomy and Histology)</option>
+                                <option value="131">M.Phil(Veterinary Surgery)</option>
+                                <option value="132">Ph.D(Veterinary Microbiology)</option>
+                                <option value="133">Ph.D(Veterinary Pathology)</option>
+                                <option value="134">Ph.D(Veterinary Parasitology)</option>
+                                <option value="135">M.Phil(Veterinary Microbiology)</option>
+                                <option value="136">M.Phil(Veterinary Pathology)</option>
+                                <option value="137">M.Phil(Veterinary Parasitology)</option>
+                                <option value="138">M.Phil(Theriogerology)</option>
+                                <option value="139">M.Phil(Veterinary Medicine)</option>
+                                <option value="140">Ph.D(Veterinary Medicine &amp; Surgery)</option>
+                                <option value="141">M.Phil(Poultry Science)</option>
+                                <option value="142">Ph.D Poultry Science</option>
+                                <option value="143">M.Sc (Hons.) Poultry Science</option>
+                                <option value="144">Ph.D(Livestock Management)</option>
+                                <option value="145">M.Phil(Livestock Management)</option>
+                                <option value="146">M.Phil(Animal Breeding and Genetics)</option>
+                                <option value="147">M.Phil(Animal Nutrition)</option>
+                                <option value="148">Ph.D(Animal Breeding and Genetics)</option>
+                                <option value="149">Ph.D(Animal Nutrition)</option>
+                                <option value="150">BS(Environmental Science)</option>
+                                <option value="151">Ph.D (Environmental Sciences)</option>
+                                <option value="152">BS(Commerce)</option>
+                                <option value="153">Ph.D(Management Sciences)</option>
+                                <option value="154">PGD - ICT(Agriculture)</option>
+                                <option value="155">BS(Software Engineering)</option>
+                                <option value="156">BS (Microbiology)</option>
+                                <option value="157">Ph.D (Biotechnology)</option>
+                                <option value="158">Ph.D (Agricultural Engineering)</option>
+                                <option value="159">BS (Geo-Informatics)</option>
+                                <option value="160">Ph.D (RS&amp;GIS)</option>
+                                <option value="161">Ph.D( Human Nutrition and Dietetics)</option>
+                                <option value="162">B.Sc. (Hons.) Human Nutrition and Dietetics</option>
+                                <option value="163">M.Sc (Hons.)Food Safety and Quality Management</option>
+                                <option value="164">M.Sc (Criminology)</option>
+                                <option value="165">Associate Degree in Education</option>
+                                <option value="166">Diploma in Educational Planning and Management</option>
+                                <option value="167">Ph.D(Education)</option>
+                                <option value="168">Montessori Teacher Training Diploma</option>
+                                <option value="169">BS(Commerce)</option>
+                                <option value="170">BS (Anthropology)</option>
+                                <option value="171">BS Mathematics</option>
+                                <option value="172">BS(Hons.) Food Technology </option>
+                                <option value="173">BS Biology</option>
+                                <option value="174">BS (Biotechnology) </option>
+                                <option value="175">BS (MLT) </option>
+                                <option value="176">BS (Zoology)</option>
+                                <option value="177">BS (Botany)</option>
+                                <option value="178">M.Phil Mathematics</option>
+                                <option value="179">BS (Chemistry)</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button style="margin-left: 80px; margin-top: 30px;" class="hero-btn green-btn"
+                                onclick="alert('Your form has been submitted')">Submit</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+    </section>
+
+    <!-- =============   Footer   =============== -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Amet itaque tenetur veniam laboriosam? Laudantium
+            <br> harum expedita magni quos. Esse atque quibusdam libero?.
+        </p>
+
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+    </section>
+
+
+    <!-- ------------------Java Script for Toggle Menu------------- -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

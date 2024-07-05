@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='portalstyle.css')}}">
+    <title>Admin Portal</title>
+</head>
+
+<body>
+
+    <!-- ======================== *****  SIDE BAR   ****** ============================= -->
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="menu">
+            <li>
+                <a href="{{url_for('portal_dash')}}">
+                    <i class="fa-solid fa-gauge"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{url_for('portal_Profile')}}">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{url_for('portal_AdForms')}}">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Messages</span>
+                </a>
+            </li>
+
+            <li class="logout">
+                <a href="{{url_for('login')}}">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ======================== *****  Main Content   ****** ============================= -->
+    <div class="main--content">
+
+        <div class="header--wrapper">
+            <div class="header--title">
+                <span>Admin Profile</span>
+                <h2>Information</h2>
+            </div>
+            <div class="user--info">
+                <!-- <div class="search--box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="search">
+                </div> -->
+                <h3>Admin</h3>
+                <img src="{{url_for('static',filename='images/Zeeshan.png')}}" alt="">
+            </div>
+        </div>
+
+        <!-- <div class="card-container">
+            <h3 class="main-title">Student Data</h3>
+            <div class="card--container">
+                <div class="payment--card">
+                    
+                </div>
+            </div>
+        </div> -->
+
+        <div class="data">
+            <h2 class="data-title">Profile Details of Admins</h2>
+            <div class="TotalForms">
+                <p>Zeeshan Haider</p>
+                <p>Syed Muzammil Ali Shah</p>
+                <p>Hamza Ahmed</p>
+                <p>Abdul Rehman</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

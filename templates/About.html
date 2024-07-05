@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arid Agricultural University</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="{{ url_for('static', filename='images/Logo2.png') }}"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a target="_blank" href="{{ url_for('index') }}">HOME</a></li>
+                    <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+                    <li><a href="{{ url_for('course') }}">COURSE</a></li>
+                    <li><a href="{{ url_for('applyonline') }}">APPLY ONLINE</a></li>
+                    <li><a target="_blank" href="{{ url_for('contact_us') }}">CONTACT</a></li>
+                    <li><a target="_blank" href="{{ url_for('login') }}">ADMIN</a></li>
+                </ul>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>About Us</h1>
+    </section>
+
+
+    <!-- ===================    About US  ====================== -->
+
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>ABOUT AAUR</h1>
+                <p>Since its inception, AAUR has experienced remarkable growth and is offering undergraduate as well as
+                    post graduate degree programs in variety of disciplines. The University includes a Faculty of
+                    Agriculture, Faculty of Sciences, Faculty of Social Sciences, Faculty of Veterinary & Animal
+                    Sciences, Faculty of Agricultural Engineering and Technology, University Institute of Management
+                    Sciences (UIMS), University Institute of Information Technology (UIIT), University Institute of
+                    Biochemistry and Biotechnology, Institute of Geo-Information & Earth Observation, Institute of Food
+                    and Nutritional Sciences and Institute of Soil and Environmental Sciences. The University building
+                    contains an auditorium, multi-storied administrative block, a library, a museum, four multi-stories
+                    academic blocks and international standard undergraduate block.</p>
+                <a href="" class="hero-btn green-btn">Explore Now</a>
+            </div>
+            <div class="about-col">
+                <img style="border-radius: 10px;" src="{{ url_for('static', filename='images/about.jpg') }}" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- =============   Footer   =============== -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Amet itaque tenetur veniam laboriosam? Laudantium
+            <br> harum expedita magni quos. Esse atque quibusdam libero?.
+        </p>
+
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+    </section>
+
+
+    <!-- ------------------Java Script for Toggle Menu------------- -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

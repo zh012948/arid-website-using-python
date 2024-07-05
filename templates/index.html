@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arid Agricultural University</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="{{ url_for('static', filename='images/Logo2.png') }}"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a target="_blank" href="{{ url_for('index') }}">HOME</a></li>
+                    <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+                    <li><a href="{{ url_for('course') }}">COURSE</a></li>
+                    <li><a href="{{ url_for('applyonline') }}">APPLY ONLINE</a></li>
+                    <li><a target="_blank" href="{{ url_for('contact_us') }}">CONTACT</a></li>
+                    <li><a target="_blank" href="{{ url_for('login') }}">ADMIN</a></li>
+                </ul>
+                </ul>
+            </div>
+            <i class=" fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Arid Agricultural University</h1>
+            <p>Welcome to PMAS-Arid Agriculture University, Rawalpindi. Being an Agricultural Institution, our main
+                objective is to produce high quality Agricultural Scientists. Therefore, we are committed with the
+                philosophy that we advance our farmer community by sharing positive and proven ideas and experiences.
+                Along with Agricultural Sciences, the university offers degree programs at all levels in basic and
+                Natural Sciences, Social Sciences, Humanities, Management Sciences, Computer Sciences and Information
+                Technology.</p>
+            <a href="" class="hero-btn" onclick="showMenu()">Visit Us to know more</a>
+        </div>
+    </section>
+
+
+    <!-- ---------Course---------- -->
+
+    <section class="course">
+        <h1>Courses We Offer</h1>
+        <p>Following are the Courses We Offer!</p>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>BS Computer Science</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, architecto repellendus! Tenetur odio
+                    molestias distinctio deleniti neque culpa nesciunt? Fugit!</p>
+            </div>
+            <div class="course-col">
+                <h3>BS Software Engineering</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error necessitatibus officiis quae nobis
+                    in, vel, voluptates accusamus recusandae ab ipsa animi porro quam, dolores iste!</p>
+            </div>
+            <div class="course-col">
+                <h3>BS Artificial Intelligence</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel commodi assumenda illo nostrum rem. Eius
+                    cum nemo expedita, totam quidem omnis! Eos tempora quae suscipit.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- -----------------Campus----------------- -->
+
+    <section class="campus">
+        <h1>Our Campus</h1>
+        <p>PMAS-UAAR consist of three CAMPUS!</p>
+
+        <div class="row">
+            <div class="campus-col">
+                <img src="{{ url_for('static', filename='images/Attock.jpg') }}">
+                <div class="layer">
+                    <h3>ATTOCK</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="{{ url_for('static', filename='images/UIIT.jpg') }}">
+                <div class="layer">
+                    <h3>UIIT</h3>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="{{ url_for('static', filename='images/BIMS.jpg') }}">
+                <div class="layer">
+                    <h3>BIMS</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========================== Facilities  =============================== -->
+
+    <section class="facilities">
+        <h1>Our Facilities</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, velit!</p>
+
+        <div class="row">
+            <div class="facilities-col">
+                <img src="{{ url_for('static', filename='images/library.png') }}" alt="">
+                <h3>World Class Library</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, nobis?</p>
+            </div>
+            <div class="facilities-col">
+                <img src="{{ url_for('static', filename='images/basketball.png') }}" alt="">
+                <h3>Largest Playground</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, nobis?</p>
+            </div>
+            <div class="facilities-col">
+                <img src="{{ url_for('static', filename='images/cafeteria.png') }}" alt="">
+                <h3>Tasty and Healthy food</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, nobis?</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ====================  Testimonials   ============================ -->
+
+    <section class="testimonials">
+        <h1>The Devs</h1>
+        <p>About Our Devs</p>
+
+        <div class="row">
+            <div class="testimonial-col">
+                <img src="{{ url_for('static', filename='images/Muzammil.png') }}" alt="">
+                <div>
+                    <p>UI/UX Specialist</p>
+                    <p>Front End Designer</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, dolorum.</p>
+                    <h3>Muzammil Ali</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+            </div>
+            <div class="testimonial-col">
+                <img src="{{ url_for('static', filename='images/Zeeshan.png') }}" alt="">
+                <div>
+                    <p>Full Stack Developer</p>
+                    <p>The OG!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, adipisci.</p>
+                    <h3>Zeeshan Haider</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+            </div>
+            <div class="testimonial-col">
+                <img src="{{ url_for('static', filename='images/Hamza.png') }}" alt="">
+                <div>
+                    <p>Front-End Developer</p>
+                    <p>Hamza Ahmed</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, modi.</p>
+                    <h3>Hamza Programmer</h3>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================   Call to Action   =============== -->
+
+    <section class="cta">
+        <h1>Enroll for our various Online Courses!</h1>
+        <a target="_blank" href="{{ url_for('applyonline') }}" class="hero-btn">APPLY ONLINE!</a>
+    </section>
+
+
+
+    <!-- =============   Footer   =============== -->
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Amet itaque tenetur veniam laboriosam? Laudantium
+            <br> harum expedita magni quos. Esse atque quibusdam libero?.
+        </p>
+
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+
+    </section>
+
+    <!-- ------------------Java Script for Toggle Menu------------- -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

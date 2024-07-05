@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-us Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+</head>
+
+<body>
+    <div id="contact-us">
+        <div class="container">
+            <div class="div1">
+                <div class="address">
+                    <h1 id="address">Address</h1>
+                    <p id="uaar">PMAS-Arid Agriculture University Rawalpindi, <br> Shamsabad, Muree Road Rawalpindi -
+                        Pakistan.</p>
+                    <label style="font-weight: bold;" for="regoffice">Registrar Office</label>
+                    <p id="regoffice">+920519292122</p>
+
+
+                    <p><span style="font-weight: bold;">Phone:</span> +92-51-9062113 <br> <span
+                            style="font-weight: bold;">Email:</span>
+                        admissions@uaar.edu.pk <br>
+                        <span style="font-weight: bold;">Fax:</span>
+                        +92-51-9290459
+                    </p>
+                </div>
+                <a target="_blank" href="{{ url_for('index') }}" id="visit">Visit our Website</a>
+            </div>
+
+            <div class=" div2">
+                <form class="form-container" method="POST" action="{{ url_for('submit_contact') }}">
+                    <input class="form-box" name="userName" type="text" placeholder="Enter your Name...." required>
+                    <input class="form-box" name="userMobile" type="number" placeholder="Enter your Mobile Number.... "
+                        required>
+                    <input class="form-box" name="userEmail" type="email" placeholder="Enter your Email...." required>
+                    <input class="form-box" name="userSubject" type="text" placeholder="Enter your Subject...."
+                        required>
+                    <textarea class="form-box" name="message" rows="5" cols="40"
+                        placeholder="Enter your message here...." required></textarea>
+                    <button id="btn-submit">Submit</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
